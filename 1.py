@@ -34,7 +34,6 @@ COLORS = [
 HEART_COUNT = 80
 HEART_INTERVAL = 45       # 爱心弹窗间隔，毫秒
 HEART_SCALE = 0.65        # 爱心占可用屏幕空间的比例
-HEART_WIDTH_RATIO = 0.65  # 在原宽度基础上收窄，适合宽屏显示
 HEART_HOLD = 2200         # 完整爱心停留时间
 DISAPPEAR_INTERVAL = 12   # 爱心窗口依次消失的间隔
 RANDOM_COUNT = 90         # 随机弹窗数量
@@ -111,7 +110,7 @@ class LoveWindows:
 
         available_w = max(1, available_w)
         available_h = max(1, available_h)
-        heart_w = available_w * HEART_SCALE * HEART_WIDTH_RATIO
+        heart_w = available_w * HEART_SCALE
         heart_h = available_h * HEART_SCALE
         left += (available_w - heart_w) / 2
         top += (available_h - heart_h) / 2
